@@ -1,5 +1,8 @@
+using Wolverine.Attributes;
+
 namespace WolverinePlayground.Web;
 
+[WolverineMessage]
 public record CreateIssue(Guid OriginatorId, string Title, string Description);
 public record AssignIssue(Guid IssueId, Guid AssigneeId);
 public record IssueCreated(Guid Id);

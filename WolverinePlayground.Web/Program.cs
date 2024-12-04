@@ -2,6 +2,7 @@ using Marten;
 using Oakton;
 using Weasel.Core;
 using Wolverine;
+using Wolverine.Attributes;
 using Wolverine.Marten;
 using WolverinePlayground.Web;
 
@@ -20,6 +21,13 @@ builder.Host.UseWolverine(opts =>
     opts.Policies.UseDurableOutboxOnAllSendingEndpoints();
 
     opts.Policies.AutoApplyTransactions();
+
+    opts.Discovery
+        .DisableConventionalDiscovery()
+        .CustomizeHandlerDiscovery(cfg =>
+        {
+            cfg.Includes.WithNameSuffix("Meow");
+        });
 });
 
 // This is the absolute, simplest way to integrate Marten into your
@@ -38,7 +46,6 @@ builder.Services.AddMarten(options =>
     {
         options.AutoCreateSchemaObjects = AutoCreate.All;
     }
-
 }).UseLightweightSessions().IntegrateWithWolverine();
 
 var app = builder.Build();

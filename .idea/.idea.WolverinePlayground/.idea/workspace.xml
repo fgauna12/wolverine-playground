@@ -10,11 +10,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47673a6b-c28b-4fe2-a747-2ee4728bf72d" name="Changes" comment="Project init. Wroks fine">
-      <change afterPath="$PROJECT_DIR$/WolverinePlayground.Web/Contracts.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WolverinePlayground.Web/CreateIssueHandler.cs" afterDir="false" />
+    <list default="true" id="47673a6b-c28b-4fe2-a747-2ee4728bf72d" name="Changes" comment="asdf">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WolverinePlayground/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WolverinePlayground/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WolverinePlayground.Web/Contracts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WolverinePlayground.Web/Contracts.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WolverinePlayground.Web/CreateIssueHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WolverinePlayground.Web/CreateIssueHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WolverinePlayground.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WolverinePlayground.Web/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WolverinePlayground.Web/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/WolverinePlayground.Web/appsettings.Development.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +28,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/27701d1579848b3f93638707dd524fdd0991b2311f12f8728e766f194dc951/HandlerDiscovery.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a1ae664e7c2d5cd26b42640443a338de75b763e090e86b81f0b37aa86e/NoHandlerExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WolverinePlayground.Console/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/fgaun/repos/wolverine-playground/WolverinePlayground/WolverinePlayground.Web/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
@@ -48,7 +51,6 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
@@ -143,7 +145,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733313469145</updated>
-      <workItem from="1733313470491" duration="1131000" />
+      <workItem from="1733313470491" duration="2621000" />
     </task>
     <task id="LOCAL-00001" summary="Project init. Wroks fine">
       <option name="closed" value="true" />
@@ -153,7 +155,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733313698789</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Working baseline">
+      <option name="closed" value="true" />
+      <created>1733314738799</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733314738799</updated>
+    </task>
+    <task id="LOCAL-00003" summary="asdf">
+      <option name="closed" value="true" />
+      <created>1733314765694</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733314765694</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,25 +183,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Project init. Wroks fine" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project init. Wroks fine" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WolverinePlayground.Web/CreateIssueHandler.cs</url>
-          <line>12</line>
-          <properties documentPath="C:\Users\fgaun\repos\wolverine-playground\WolverinePlayground\WolverinePlayground.Web\CreateIssueHandler.cs" containingFunctionPresentation="Method 'Handle'">
-            <startOffsets>
-              <option value="392" />
-            </startOffsets>
-            <endOffsets>
-              <option value="632" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Working baseline" />
+    <MESSAGE value="asdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="asdf" />
   </component>
 </project>
