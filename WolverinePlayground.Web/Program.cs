@@ -1,44 +1,61 @@
+using Marten;
+using Oakton;
+using Weasel.Core;
+using Wolverine;
+using Wolverine.Marten;
+using WolverinePlayground.Web;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// The almost inevitable inclusion of Swashbuckle:)
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// For now, this is enough to integrate Wolverine into
+// your application, but there'll be *many* more
+// options later of course :-)
+builder.Host.UseWolverine(opts =>
+{
+    opts.Policies.UseDurableInboxOnAllListeners();
+    opts.Policies.UseDurableOutboxOnAllSendingEndpoints();
+
+    opts.Policies.AutoApplyTransactions();
+});
+
+// This is the absolute, simplest way to integrate Marten into your
+// .NET application with Marten's default configuration
+builder.Services.AddMarten(options =>
+{
+    // Establish the connection string to your Marten database
+    options.Connection(builder.Configuration.GetConnectionString("Marten")!);
+
+    // Specify that we want to use STJ as our serializer
+    options.UseSystemTextJsonForSerialization();
+
+    // If we're running in development mode, let Marten just take care
+    // of all necessary schema building and patching behind the scenes
+    if (builder.Environment.IsDevelopment())
+    {
+        options.AutoCreateSchemaObjects = AutoCreate.All;
+    }
+
+}).UseLightweightSessions().IntegrateWithWolverine();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// An endpoint to create a new issue that delegates to Wolverine as a mediator
+app.MapPost("/issues/create", (CreateIssue body, IMessageBus bus) => bus.InvokeAsync(body));
 
-app.UseHttpsRedirection();
+// An endpoint to assign an issue to an existing user that delegates to Wolverine as a mediator
+app.MapPost("/issues/assign", (AssignIssue body, IMessageBus bus) => bus.InvokeAsync(body));
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+// Swashbuckle inclusion
+app.UseSwagger();
+app.UseSwaggerUI();
 
-app.MapGet("/weatherforecast", () =>
-    {
-        var forecast = Enumerable.Range(1, 5).Select(index =>
-                new WeatherForecast
-                (
-                    DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                    Random.Shared.Next(-20, 55),
-                    summaries[Random.Shared.Next(summaries.Length)]
-                ))
-            .ToArray();
-        return forecast;
-    })
-    .WithName("GetWeatherForecast")
-    .WithOpenApi();
+app.MapGet("/", () => Results.Redirect("/swagger"));
 
-app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
+// Opt into using Oakton for command line parsing
+// to unlock built in diagnostics and utility tools within
+// your Wolverine application
+return await app.RunOaktonCommands(args);
