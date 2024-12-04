@@ -1,4 +1,5 @@
 using Marten;
+using MediatR;
 using Oakton;
 using Weasel.Core;
 using Wolverine;
@@ -23,11 +24,17 @@ builder.Host.UseWolverine(opts =>
     opts.Policies.AutoApplyTransactions();
 
     opts.Discovery
-        .DisableConventionalDiscovery()
         .CustomizeHandlerDiscovery(cfg =>
         {
-            cfg.Includes.WithNameSuffix("Meow");
+            cfg.Excludes.Implements(typeof(IWolverineIgnore));
         });
+
+    Console.WriteLine(opts.DescribeHandlerMatch(typeof(MediatrHandler)));
+});
+
+builder.Services.AddMediatR(cfg =>
+{
+    cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);
 });
 
 // This is the absolute, simplest way to integrate Marten into your
@@ -55,6 +62,9 @@ app.MapPost("/issues/create", (CreateIssue body, IMessageBus bus) => bus.InvokeA
 
 // An endpoint to assign an issue to an existing user that delegates to Wolverine as a mediator
 app.MapPost("/issues/assign", (AssignIssue body, IMessageBus bus) => bus.InvokeAsync(body));
+
+// This should not work
+app.MapPost("/break", (FakeCommand body, IMessageBus bus) => bus.InvokeAsync(body));
 
 // Swashbuckle inclusion
 app.UseSwagger();

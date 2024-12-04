@@ -10,7 +10,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47673a6b-c28b-4fe2-a747-2ee4728bf72d" name="Changes" comment="Not worky" />
+    <list default="true" id="47673a6b-c28b-4fe2-a747-2ee4728bf72d" name="Changes" comment="Removing dumb files">
+      <change afterPath="$PROJECT_DIR$/WolverinePlayground.Web/MediatrHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WolverinePlayground/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WolverinePlayground/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WolverinePlayground.Web/CreateIssueHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WolverinePlayground.Web/CreateIssueHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WolverinePlayground.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WolverinePlayground.Web/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WolverinePlayground.Web/WolverinePlayground.Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WolverinePlayground.Web/WolverinePlayground.Web.csproj" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,7 +146,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733313469145</updated>
-      <workItem from="1733313470491" duration="2934000" />
+      <workItem from="1733313470491" duration="4305000" />
     </task>
     <task id="LOCAL-00001" summary="Project init. Wroks fine">
       <option name="closed" value="true" />
@@ -174,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733316340980</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Removing dumb files">
+      <option name="closed" value="true" />
+      <created>1733316592308</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733316592308</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +203,7 @@
     <MESSAGE value="Working baseline" />
     <MESSAGE value="asdf" />
     <MESSAGE value="Not worky" />
-    <option name="LAST_COMMIT_MESSAGE" value="Not worky" />
+    <MESSAGE value="Removing dumb files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removing dumb files" />
   </component>
 </project>

@@ -26,3 +26,4 @@ public static class MeowCreateIssueHandler
         return new IssueCreated(issue.Id);
     }
 }
+
