@@ -10,12 +10,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47673a6b-c28b-4fe2-a747-2ee4728bf72d" name="Changes" comment="asdf">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WolverinePlayground/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WolverinePlayground/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WolverinePlayground.Web/Contracts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WolverinePlayground.Web/Contracts.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WolverinePlayground.Web/CreateIssueHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WolverinePlayground.Web/CreateIssueHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WolverinePlayground.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WolverinePlayground.Web/Program.cs" afterDir="false" />
-    </list>
+    <list default="true" id="47673a6b-c28b-4fe2-a747-2ee4728bf72d" name="Changes" comment="Not worky" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -145,7 +140,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733313469145</updated>
-      <workItem from="1733313470491" duration="2621000" />
+      <workItem from="1733313470491" duration="2934000" />
     </task>
     <task id="LOCAL-00001" summary="Project init. Wroks fine">
       <option name="closed" value="true" />
@@ -171,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733314765694</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Not worky">
+      <option name="closed" value="true" />
+      <created>1733316340980</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733316340980</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +188,7 @@
     <MESSAGE value="Project init. Wroks fine" />
     <MESSAGE value="Working baseline" />
     <MESSAGE value="asdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="asdf" />
+    <MESSAGE value="Not worky" />
+    <option name="LAST_COMMIT_MESSAGE" value="Not worky" />
   </component>
 </project>
